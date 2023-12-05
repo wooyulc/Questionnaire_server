@@ -1,37 +1,15 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
-
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
-
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
-
 ## Description
+
 Nestjs, TypeORM, GraphQL 그리고 PostgreSQL을 사용하여
-* 설문지 객관식 문항 데이터베이스 설계
-* CRUD 기능을 실현 시킨 서버입니다. 
+
+- 설문지 객관식 문항 데이터베이스 설계
+- CRUD 기능을 실현 시킨 서버입니다.
 
 ## Installation
 
-
 $ npm install
-```
+
+````
 
 ## Running the app
 
@@ -44,31 +22,42 @@ $ npm run start:dev
 
 # production mode
 $ npm run start:prod
+````
+
+## 사용법(test)
+
+1. **서버 시작**:
+
+   - 서버를 실행합니다:
+
+     ```bash
+     npm run start
+     ```
+
+   서버는 기본적으로 `http://localhost:4000`에서 시작됩니다.
+
+2. **GraphQL Playground**:
+
+   - 웹 브라우저에서 `http://localhost:4000/graphql`로 이동합니다.
+   - GraphQL Playground를 사용하여 API와 상호 작용합니다:
+     - 쿼리, 뮤테이션 및 서브스크립션 작성합니다.
+     - 사용 가능한 스키마, 타입 및 작업을 탐색합니다.
+     - API 엔드포인트를 테스트하고 CRUD 작업을 수행합니다.
+
+3. **엔티티**:
+
+   - `src/entities`의 엔티티 파일을 살펴보고 데이터베이스 구조를 이해합니다.
+   - 각 엔티티는 데이터베이스의 테이블을 나타내며 정의된 관계를 갖고 있습니다.
+
+4. **CRUD 작업**:
+
+   - `src/modules`의 서비스 및 리졸버를 수정하여 엔티티의 CRUD 작업을 처리합니다.
+   - GraphQL Playground를 사용하여 쿼리/뮤테이션을 작성하고 실행하여 이러한 작업을 테스트합니다.
+
+5. **테스트**:
+   - GraphQL Playground를 사용하여 다양한 시나리오와 입력 데이터를 시뮬레이션하고 경계 사례를 테스트합니다.
+   - 응답, 오류 처리 및 API 엔드포인트의 동작을 확인합니다.
+
 ```
 
-## Test
-
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
 ```
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](LICENSE).
